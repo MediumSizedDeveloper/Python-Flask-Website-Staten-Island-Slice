@@ -79,15 +79,6 @@ def sign_up():
 
     return render_template("sign_up.html", user=current_user)
 
-@auth.route("/items")
-def display_items():
-    # Query items from the database
-    items = (
-        Item.query.all()
-    )  # Retrieve all items, you can use more complex queries as needed
-
-    # Render the HTML template with the items
-    return render_template("items.html", items=items)
 
 
 @auth.route("/admin", methods=["GET", "POST"])
@@ -109,4 +100,3 @@ def admin():
             flash("Item added.", category="success")
 
     return render_template("admin.html", user=current_user)
-

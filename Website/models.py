@@ -16,29 +16,15 @@ class Invoice(db.Model):
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255))
-    description = db.Column(db.String(255))
+    # description = db.Column(db.String(255))
     price = db.Column(db.Float)
-    addOn = db.Column(db.String(255))
+    # addOn = db.Column(db.String(255))
     calories = db.Column(db.Integer)
+    #img_url = db.Column(db.String, nullable=False) 
 
     def __repr__(self):
         return f"{self.name} - {self.price}"
-    
-    #references meanmugs
-    def __init__(self, name, img_url, description, price, quantity):
-        self.name = name
-        self.img_url = img_url
-        self.description = description
-        self.price = price
-        self.quantity = quantity
 
-    def saveToDB(self):
-        db.session.add(self)
-        db.session.commit()
-        
-    def deleteFromDB(self):
-        db.session.delete(self)
-        db.session.commit()
 
 class Cart(db.Model):
     id = db.Column(db.Integer, primary_key=True)
