@@ -5,7 +5,11 @@
         .x{
             display: inline-block;
             content: "\00d7"; /* This will render the 'X' */
-        }   
+        }
+        .shop-more-btn{
+            margin-right:10px;
+            display: inline-block;
+        }
     </style>
       
 </head>
@@ -48,13 +52,13 @@
         <h5 class="card-title">Total:</h5>
         <p class="card-text">${{sub_total}}</p>
 
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <a href = "/items" style="color: white">Order More</a>
-            </button>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color:rgb(54, 172, 11)">
+            <a href = "/items" style="color: white">Order More</a>
+        </button>
 
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                <a href = "/checkout" style="color: white">Checkout</a>
-            </button>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1" style="background-color:rgb(54, 172, 11)">
+            <a href = "/checkout" style="color: white">Checkout</a>
+        </button>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
