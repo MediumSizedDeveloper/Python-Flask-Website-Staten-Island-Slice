@@ -1,4 +1,4 @@
-This is mean to be a food delivery esque website that allows users to order food and have it delivered to their address.
+This is meant to be a food delivery esque website that allows users to order food and have it delivered to their address.
 
 It is ran on a locally and the entry point is in main.py, which, when ran, gives you a development server link in the terminal.
 
